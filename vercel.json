@@ -3,7 +3,7 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "nodejs": "20.x",
+
   "regions": ["iad1"],
   "env": [
     {
