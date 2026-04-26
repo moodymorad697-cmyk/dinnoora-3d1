@@ -3,11 +3,22 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://dinoora.com",
-    "NEXT_PUBLIC_WHATSAPP_NUMBER": "+971503456789",
-    "NEXT_PUBLIC_CONTACT_EMAIL": "contact@dinnoora.com"
-  },
+  "nodejs": "20.x",
+  "regions": ["iad1"],
+  "env": [
+    {
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "value": "https://dinoora.com"
+    },
+    {
+      "key": "NEXT_PUBLIC_WHATSAPP_NUMBER",
+      "value": "+971503456789"
+    },
+    {
+      "key": "NEXT_PUBLIC_CONTACT_EMAIL",
+      "value": "contact@dinnoora.com"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -27,8 +38,19 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https:;"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }

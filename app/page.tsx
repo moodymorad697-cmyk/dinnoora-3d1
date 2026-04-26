@@ -1,5 +1,5 @@
 import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
+import { HeroWith3D } from "@/components/3d-hero"
 import { WhyChooseUs } from "@/components/why-choose-us"
 import { HowItWorks } from "@/components/how-it-works"
 import { ProcessTimeline } from "@/components/process-timeline"
@@ -17,7 +17,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      <Hero />
+      {/* استخدم الـ 3D Hero الجديد */}
+      <HeroWith3D />
       <WhyChooseUs />
       <HowItWorks />
       <ProcessTimeline />
